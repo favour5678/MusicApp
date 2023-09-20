@@ -1,8 +1,14 @@
 import React from 'react'
+import LuMusic2 from ''
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <main>
+        <div>
+            {/* <LuMusic2 /> */}
+            <p>Music</p>
+        </div>
+    </main>
   )
 }
 
