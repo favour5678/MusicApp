@@ -1,15 +1,16 @@
-import React from 'react'
-import LuMusic2 from ''
+import React from "react";
+import LeftSection from "./LeftSection";
+import RightSection from "./RightSection";
 
 const Home = () => {
   return (
-    <main>
-        <div>
-            {/* <LuMusic2 /> */}
-            <p>Music</p>
-        </div>
+    <main className="bg-gradient-to-br from from-[#3B1D26] to-[#111111] w-full h-screen text-white">
+      <div>
+        <LeftSection />
+        <RightSection />
+      </div>
     </main>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
