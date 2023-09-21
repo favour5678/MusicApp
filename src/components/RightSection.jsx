@@ -2,7 +2,8 @@ import React from 'react'
 
 const RightSection = () => {
   return (
-    <div>RightSection</div>
+    <section className='w-[78%] h-screen overflow-y-auto'>
+    </section>
   )
 }
 
