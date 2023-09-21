@@ -2,6 +2,7 @@ import React from 'react'
 import { LuMusic2 } from 'react-icons/lu'
 import { CiSearch } from 'react-icons/ci'
 import { AiFillHome } from 'react-icons/ai'
+import { MdOutlinePlaylistAddCheckCircle } from 'react-icons/md'
 
 const LeftSection = () => {
   return (
@@ -20,6 +21,7 @@ const LeftSection = () => {
                 <p>Home</p>
             </div>
             <div>
+                <MdOutlinePlaylistAddCheckCircle />
                 <p>Playlists</p>
             </div>
         </section>
