@@ -5,6 +5,7 @@ import { ImPlus } from "react-icons/im";
 
 const RightSection = () => {
   const [musicData, setMusicData] = useState([]);
+  const [searchSong, setSearchSong] = useState('')
 
   useEffect(() => {
     const apiUrl = "https://robo-music-api.onrender.com/music/my-api";
@@ -20,7 +21,7 @@ const RightSection = () => {
       .catch((error) => {
         console.log("Error fetching music data", error);
       });
-  }, []);
+  }, [searchSong]);
 
   return (
     <section className="w-[78%] h-screen overflow-y-auto">
