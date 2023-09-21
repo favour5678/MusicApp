@@ -20,7 +20,7 @@ const LeftSection = () => {
         </div>
         <div className="flex items-center border border-gray-50 rounded-full w-[70%] h-9 px-2 mt-10">
           <button>
-            <BiSearchAlt className="text-xl"    />
+            <BiSearchAlt className="text-xl" />
           </button>
           <input
             type="text"

@@ -1,9 +1,17 @@
-import React from 'react'
+import { createContext, useContext, useState } from "react";
 
-const SongContext = () => {
-  return (
-    <div>SongContext</div>
-  )
+const SongContext = createContext();
+
+export const useSongContext = () => {
+  return useContext(SongContext)
 }
 
-export default SongContext;
+export const SongProvider = ({ children }) => {
+  const [searchSong, setSearchSong] = useState('')
+
+  return (
+    <SongContext.Provider value={{ searchSong, setSearchSong }}>
+      {children}
+    </SongContext.Provider>
+  )
+}
