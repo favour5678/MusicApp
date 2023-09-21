@@ -34,15 +34,15 @@ const LeftSection = () => {
         {/* Menu */}
         <div className="space-y-3">
           <h2 className="text-xl">Menu</h2>
-          <span className="flex items-center cursor-pointer">
+          <span className="flex items-center cursor-pointer hover:bg-[#B23238] duration-200 ease-in-out">
             <AiFillHome className="text-lg" />
             <p className="text-base pl-2">Home</p>
           </span>
-          <span className="flex items-center cursor-pointer">
+          <span className="flex items-center cursor-pointer hover:bg-[#B23238] duration-200 ease-in-out">
             <MdOutlinePlaylistAddCheckCircle className="text-lg" />
             <p className="text-base pl-2">Playlists</p>
           </span>
-          <span className="flex items-center cursor-pointer">
+          <span className="flex items-center cursor-pointer hover:bg-[#B23238] duration-200 ease-in-out">
             <FaHeadphonesAlt className="text-lg" />
             <p className="text-base pl-2">Artists</p>
           </span>
@@ -51,15 +51,15 @@ const LeftSection = () => {
         {/* Library */}
         <div className="space-y-3">
           <h2 className="text-xl">Library</h2>
-          <span className="flex items-center cursor-pointer">
+          <span className="flex items-center cursor-pointer hover:bg-[#B23238] duration-200 ease-in-out">
             <GiLoveSong className="text-lg" />
             <p className="text-base pl-2">Songs</p>
           </span>
-          <span className="flex items-center cursor-pointer">
+          <span className="flex items-center cursor-pointer hover:bg-[#B23238] duration-200 ease-in-out">
             <IoAlbumsOutline className="text-lg" />
             <p className="text-base pl-2">Albums</p>
           </span>
-          <span className="flex items-center cursor-pointer">
+          <span className="flex items-center cursor-pointer hover:bg-[#B23238] duration-200 ease-in-out">
             <AiOutlineVideoCamera className="text-lg" />
             <p className="text-base pl-2">Music Videos</p>
           </span>
@@ -68,11 +68,11 @@ const LeftSection = () => {
         {/* Other */}
         <div className="space-y-3">
           <h2 className="text-xl">Other</h2>
-          <span className="flex items-center cursor-pointer">
+          <span className="flex items-center cursor-pointer hover:bg-[#B23238] duration-200 ease-in-out">
             <BsGear className="text-lg" />
             <p className="text-base pl-2">Settings</p>
           </span>
-          <span className="flex items-center cursor-pointer">
+          <span className="flex items-center cursor-pointer hover:bg-[#B23238] duration-200 ease-in-out">
             <BiLogOut className="text-lg" />
             <p className="text-base pl-2">Log out</p>
           </span>
