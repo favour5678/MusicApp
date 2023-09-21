@@ -26,7 +26,7 @@ const RightSection = () => {
     <section className="w-[78%] h-screen overflow-y-auto">
       <div className="flex mx-auto text-[15px] border border-t-0 border-r-0 border-l-0 mb-4 mt-3 w-[95%]">
         <h4 className="w-[12%] text-center ml-[19%]">#Song</h4>
-        <h4 className="w-[10%] text-center ml-[13%]">#Artist</h4>
+        <h4 className="w-[7%] text-center ml-[13%]">#Artist</h4>
       </div>
       {musicData.map((song) => (
         <div
