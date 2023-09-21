@@ -1,6 +1,5 @@
 import React from "react";
 import { PiMusicNoteDuotone } from "react-icons/pi";
-import { BiSearchAlt } from "react-icons/bi";
 import { AiFillHome } from "react-icons/ai";
 import { MdOutlinePlaylistAddCheckCircle } from "react-icons/md";
 import { FaHeadphonesAlt } from "react-icons/fa";
@@ -9,8 +8,10 @@ import { IoAlbumsOutline } from "react-icons/io5";
 import { BsGear } from "react-icons/bs";
 import { BiLogOut } from "react-icons/bi";
 import { AiOutlineVideoCamera } from "react-icons/ai";
+import SearchSong from "./SearchSong";
 
-const LeftSection = () => {
+
+const LeftSection = ({setSearchSong}) => {
   return (
     <section className="w-[22%] h-screen border border-r-white border-l-0 border-t-0 border-b-0">
       <div className="flex flex-col items-center pt-5">
@@ -18,16 +19,7 @@ const LeftSection = () => {
           <PiMusicNoteDuotone className="text-[#B23238] text-4xl" />
           <h2 className="text-2xl pl-2">Music</h2>
         </div>
-        <div className="flex items-center border border-gray-50 rounded-full w-[70%] h-9 px-2 mt-10">
-          <button>
-            <BiSearchAlt className="text-xl" />
-          </button>
-          <input
-            type="text"
-            placeholder="Search"
-            className="bg-transparent outline-none ml-2 overflow-x-auto"
-          />
-        </div>
+        <SearchSong onSearch={setSearchSong}/>
       </div>
 
       <div className="pl-12 space-y-10 mt-5">
