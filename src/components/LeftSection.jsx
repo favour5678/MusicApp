@@ -11,10 +11,11 @@ import { BiLogOut } from "react-icons/bi";
 
 const LeftSection = () => {
     return (
+        // #AF3143
         <section>
-            <div>
-                <LuMusic2 />
-                <p>Music</p>
+            <div className="flex items-center">
+                <LuMusic2 className="text-[#B23238] text-3xl"/>
+                <h2 className="text-2xl">Music</h2>
             </div>
             <div>
                 <CiSearch />
