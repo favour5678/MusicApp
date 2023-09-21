@@ -1,6 +1,7 @@
 import React from "react";
-import LeftSection from "./LeftSection";
-import RightSection from "./RightSection";
+import LeftSection from "../components/LeftSection";
+import RightSection from "../components/RightSection";
+
 
 const Home = () => {
   return (
