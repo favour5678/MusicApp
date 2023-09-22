@@ -2,26 +2,28 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { BsPlayCircleFill } from "react-icons/bs";
 import { ImPlus } from "react-icons/im";
+import { useSongContext } from "../context/SongContext";
 
 const RightSection = () => {
-  const [musicData, setMusicData] = useState([]);
-  const [searchSong, setSearchSong] = useState('')
+  const { musicData, setMusicData, filteredSong } = useSongContext();
+  // const [searchSong, setSearchSong] = useState('')
+  // const [filteredSong, setFilteredSong] = useState([])
 
   useEffect(() => {
     const apiUrl = "https://robo-music-api.onrender.com/music/my-api";
+    // const apiUrl = `https://robo-music-api.onrender.com/music/my-api?search=${searchSong}`;
     // const limit =10
     // const apiUrl = `https://robo-music-api.onrender.com/music/my-api?limit=${limit}`
 
-    axios
-      .get(apiUrl)
-      .then((response) => {
+    axios.get(apiUrl)
+      .then(response => {
         setMusicData(response.data);
         console.log(response.data);
       })
-      .catch((error) => {
+      .catch(error => {
         console.log("Error fetching music data", error);
       });
-  }, [searchSong]);
+  }, []);
 
   return (
     <section className="w-[78%] h-screen overflow-y-auto">
@@ -29,7 +31,10 @@ const RightSection = () => {
         <h4 className="w-[12%] text-center ml-[19%]">#Song</h4>
         <h4 className="w-[7%] text-center ml-[13%]">#Artist</h4>
       </div>
-      {musicData.map((song) => (
+      {filteredSong.map(song => (
+        <p key={song.id}>{song.songTitle}</p>
+      ))}
+      {musicData.map(song => (
         <div
           key={song.id}
           className="flex mx-auto justify-between items-center bg-[#B23238] mb-5 w-[95%]"

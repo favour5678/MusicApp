@@ -8,9 +8,11 @@ export const useSongContext = () => {
 
 export const SongProvider = ({ children }) => {
   const [searchSong, setSearchSong] = useState('')
+  const [musicData, setMusicData] = useState([]);
+  const [filteredSong, setFilteredSong] = useState([])
 
   return (
-    <SongContext.Provider value={{ searchSong, setSearchSong }}>
+    <SongContext.Provider value={{ searchSong, setSearchSong, filteredSong, setFilteredSong, musicData, setMusicData }}>
       {children}
     </SongContext.Provider>
   )
