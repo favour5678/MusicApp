@@ -3,18 +3,18 @@ import { createContext, useContext, useState } from "react";
 const SongContext = createContext();
 
 export const useSongContext = () => {
-  return useContext(SongContext)
-}
+  return useContext(SongContext);
+};
 
 export const SongProvider = ({ children }) => {
-  const [searchSong, setSearchSong] = useState('')
   const [musicData, setMusicData] = useState([]);
-  const [filteredSong, setFilteredSong] = useState([])
-  const [displayFiltered, setDisplayFiltered] = useState(false)
+  const [searchSong, setSearchSong] = useState("");
 
   return (
-    <SongContext.Provider value={{ searchSong, setSearchSong, filteredSong, setFilteredSong, musicData, setMusicData, displayFiltered, setDisplayFiltered }}>
+    <SongContext.Provider
+      value={{ searchSong, setSearchSong, musicData, setMusicData }}
+    >
       {children}
     </SongContext.Provider>
-  )
-}
+  );
+};

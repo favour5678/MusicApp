@@ -19,16 +19,7 @@ const LeftSection = () => {
           <PiMusicNoteDuotone className="text-[#B23238] text-4xl" />
           <h2 className="text-2xl pl-2">Music</h2>
         </div>
-        <div className="flex items-center border border-gray-50 rounded-full w-[70%] h-9 px-2 mt-10">
-        <button>
-            <BiSearchAlt className="text-xl" />
-        </button>
-        <input
-            type="text"
-            placeholder="Search"
-            className="bg-transparent outline-none ml-2 overflow-x-auto"
-        />
-        </div>
+        
       </div>
 
       <div className="pl-12 space-y-10 mt-5">

@@ -5,21 +5,22 @@ import { ImPlus } from "react-icons/im";
 import { useSongContext } from "../context/SongContext";
 
 const RightSection = () => {
-  const { musicData, setMusicData, } = useSongContext();
+  const { musicData, setMusicData, setSearchSong } = useSongContext();
 
   useEffect(() => {
     const apiUrl = "https://robo-music-api.onrender.com/music/my-api";
-    
+   
     axios.get(apiUrl)
       .then(response => {
         setMusicData(response.data);
-        console.log(response.data);
+        return response;
+      }).then(response => {
+        setSearchSong(response)
       })
       .catch(error => {
         console.log("Error fetching music data", error);
       });
   }, []);
-  
 
   return (
     <section className="w-[78%] h-screen overflow-y-auto">
