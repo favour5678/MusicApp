@@ -5,7 +5,7 @@ import { ImPlus } from "react-icons/im";
 import { useSongContext } from "../context/SongContext";
 
 const RightSection = () => {
-  const { musicData, setMusicData, filteredSong } = useSongContext();
+  const { musicData, setMusicData, } = useSongContext();
   // const [searchSong, setSearchSong] = useState('')
   // const [filteredSong, setFilteredSong] = useState([])
 
@@ -24,6 +24,7 @@ const RightSection = () => {
         console.log("Error fetching music data", error);
       });
   }, []);
+  
 
   return (
     <section className="w-[78%] h-screen overflow-y-auto">
@@ -31,9 +32,6 @@ const RightSection = () => {
         <h4 className="w-[12%] text-center ml-[19%]">#Song</h4>
         <h4 className="w-[7%] text-center ml-[13%]">#Artist</h4>
       </div>
-      {filteredSong.map(song => (
-        <p key={song.id}>{song.songTitle}</p>
-      ))}
       {musicData.map(song => (
         <div
           key={song.id}

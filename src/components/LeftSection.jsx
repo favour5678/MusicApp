@@ -10,20 +10,9 @@ import { BiLogOut } from "react-icons/bi";
 import { AiOutlineVideoCamera } from "react-icons/ai";
 // import SearchSong from "./SearchSong";
 import { BiSearchAlt } from "react-icons/bi";
-import { useSongContext } from "../context/SongContext";
 
 
 const LeftSection = () => {
-    const { searchSong, setSearchSong, setFilteredSong, musicData } = useSongContext()
-
-    const handleSearch = () => {
-    const filteredSongResults = musicData.filter(song => {
-        song.songTitle.toLowerCase().includes(searchSong.toLowerCase())
-        })
-    
-        setFilteredSong(filteredSongResults)
-    }
-
   return (
     <section className="w-[22%] h-screen border border-r-white border-l-0 border-t-0 border-b-0">
       <div className="flex flex-col items-center pt-5">
@@ -34,14 +23,12 @@ const LeftSection = () => {
         {/* <SearchSong onSearch={setSearchSong}/> */}
         <div className="flex items-center border border-gray-50 rounded-full w-[70%] h-9 px-2 mt-10">
         <button>
-            <BiSearchAlt className="text-xl"  onClick={handleSearch}/>
+            <BiSearchAlt className="text-xl" />
         </button>
         <input
             type="text"
             placeholder="Search"
             className="bg-transparent outline-none ml-2 overflow-x-auto"
-            value={searchSong}
-            onChange={e => setSearchSong(e.target.value)}
         />
         </div>
       </div>

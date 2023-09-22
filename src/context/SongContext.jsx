@@ -10,9 +10,10 @@ export const SongProvider = ({ children }) => {
   const [searchSong, setSearchSong] = useState('')
   const [musicData, setMusicData] = useState([]);
   const [filteredSong, setFilteredSong] = useState([])
+  const [displayFiltered, setDisplayFiltered] = useState(false)
 
   return (
-    <SongContext.Provider value={{ searchSong, setSearchSong, filteredSong, setFilteredSong, musicData, setMusicData }}>
+    <SongContext.Provider value={{ searchSong, setSearchSong, filteredSong, setFilteredSong, musicData, setMusicData, displayFiltered, setDisplayFiltered }}>
       {children}
     </SongContext.Provider>
   )
