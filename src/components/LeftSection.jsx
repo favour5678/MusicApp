@@ -8,7 +8,6 @@ import { IoAlbumsOutline } from "react-icons/io5";
 import { BsGear } from "react-icons/bs";
 import { BiLogOut } from "react-icons/bi";
 import { AiOutlineVideoCamera } from "react-icons/ai";
-// import SearchSong from "./SearchSong";
 import { BiSearchAlt } from "react-icons/bi";
 
 
@@ -20,7 +19,6 @@ const LeftSection = () => {
           <PiMusicNoteDuotone className="text-[#B23238] text-4xl" />
           <h2 className="text-2xl pl-2">Music</h2>
         </div>
-        {/* <SearchSong onSearch={setSearchSong}/> */}
         <div className="flex items-center border border-gray-50 rounded-full w-[70%] h-9 px-2 mt-10">
         <button>
             <BiSearchAlt className="text-xl" />

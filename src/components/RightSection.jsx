@@ -6,15 +6,10 @@ import { useSongContext } from "../context/SongContext";
 
 const RightSection = () => {
   const { musicData, setMusicData, } = useSongContext();
-  // const [searchSong, setSearchSong] = useState('')
-  // const [filteredSong, setFilteredSong] = useState([])
 
   useEffect(() => {
     const apiUrl = "https://robo-music-api.onrender.com/music/my-api";
-    // const apiUrl = `https://robo-music-api.onrender.com/music/my-api?search=${searchSong}`;
-    // const limit =10
-    // const apiUrl = `https://robo-music-api.onrender.com/music/my-api?limit=${limit}`
-
+    
     axios.get(apiUrl)
       .then(response => {
         setMusicData(response.data);
