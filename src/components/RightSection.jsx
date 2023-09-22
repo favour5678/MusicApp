@@ -13,6 +13,7 @@ const RightSection = () => {
     axios.get(apiUrl)
       .then(response => {
         setMusicData(response.data);
+        console.log(response.data);
         return response;
       }).then(response => {
         setSearchSong(response)
