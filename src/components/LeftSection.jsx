@@ -8,7 +8,6 @@ import { IoAlbumsOutline } from "react-icons/io5";
 import { BsGear } from "react-icons/bs";
 import { BiLogOut } from "react-icons/bi";
 import { AiOutlineVideoCamera } from "react-icons/ai";
-import { BiSearchAlt } from "react-icons/bi";
 import SearchSong from "./SearchSong";
 
 

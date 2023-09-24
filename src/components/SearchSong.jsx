@@ -8,10 +8,10 @@ const SearchSong = () => {
     const handleSearchChange = (e) => {
         if(!e.target.value) return setSearchSong(musicData)
 
-        // const songResults = musicData.filter(song => song.songTitle.includes(e.target.value))
-        const songResults = musicData.filter(song => {
-            song.songTitle.includes(e.target.value) || song.body.includes(e.target.value)
-        })
+        const songResults = musicData.filter(song => song.songTitle.includes(e.target.value))
+        // const songResults = musicData.filter(song => {
+        //     song.songTitle.includes(e.target.value) 
+        // })
 
         setSearchSong(songResults)
     }
