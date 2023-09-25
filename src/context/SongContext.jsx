@@ -8,7 +8,7 @@ export const useSongContext = () => {
 
 export const SongProvider = ({ children }) => {
   const [musicData, setMusicData] = useState([]);
-  const [searchSong, setSearchSong] = useState("");
+  const [searchSong, setSearchSong] = useState('');
 
   return (
     <SongContext.Provider

@@ -6,14 +6,16 @@ const SearchSong = () => {
     const { musicData, setSearchSong } = useSongContext()
 
     const handleSearchChange = (e) => {
-        if(!e.target.value) return setSearchSong(musicData)
+        // if(!e.target.value) return setSearchSong(musicData)
 
-        const songResults = musicData.filter(song => song.songTitle.includes(e.target.value))
-        // const songResults = musicData.filter(song => {
-        //     song.songTitle.includes(e.target.value) 
-        // })
+        // const songResults = musicData.filter(song => song.songTitle.includes(e.target.value))
+        // // const songResults = musicData.filter(song => {
+        // //     song.songTitle.includes(e.target.value) 
+        // // })
 
-        setSearchSong(songResults)
+        // setSearchSong(songResults)
+        setSearchSong(e.target.value)
+        
     }
 
   return (
@@ -23,7 +25,7 @@ const SearchSong = () => {
       </button>
       <input
         type="text"
-        placeholder="Search"
+        placeholder="Search songs"
         className="bg-transparent outline-none ml-2 overflow-x-auto"
         onChange={handleSearchChange}
       />
