@@ -3,10 +3,10 @@ import React, { useEffect, useState } from "react";
 import { BsPlayCircleFill } from "react-icons/bs";
 import { ImPlus } from "react-icons/im";
 import { useSongContext } from "../context/SongContext";
+import SongController from "./SongController";
 
 const RightSection = () => {
-  const { musicData, setMusicData, searchSong } =
-    useSongContext();
+  const { musicData, setMusicData, searchSong } = useSongContext();
 
   useEffect(() => {
     const apiUrl = "https://robo-music-api.onrender.com/music/my-api";
@@ -30,6 +30,7 @@ const RightSection = () => {
         <h4 className="w-[12%] text-center ml-[19%]">#Song</h4>
         <h4 className="w-[7%] text-center ml-[13%]">#Artist</h4>
       </div>
+      <SongController />
       {combinedData.map((song) => (
         <div
           key={song.id}
