@@ -15,11 +15,10 @@ const RightSection = () => {
       .get(apiUrl)
       .then((response) => {
         setMusicData(response.data);
-        console.log(response.data);
         return response;
       })
       .catch((error) => {
-        console.log("Error fetching music data", error);
+        setMusicData("Error fetching music data", error);
       });
   }, []);
 
