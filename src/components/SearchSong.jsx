@@ -13,7 +13,6 @@ const SearchSong = () => {
       const songResults = musicData.filter((song) =>
         song.songTitle.toLowerCase().includes(searchValue)
       );
-      console.log(songResults);
       setSearchSong(songResults);
     }
   };
