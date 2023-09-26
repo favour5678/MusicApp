@@ -8,7 +8,7 @@ import { IoAlbumsOutline } from "react-icons/io5";
 import { BsGear } from "react-icons/bs";
 import { BiLogOut } from "react-icons/bi";
 import { AiOutlineVideoCamera } from "react-icons/ai";
-import SearchSong from "./SearchSong";
+import SearchSongs from "./SearchSongs";
 
 
 const LeftSection = () => {
@@ -19,7 +19,7 @@ const LeftSection = () => {
           <PiMusicNoteDuotone className="text-[#B23238] text-4xl" />
           <h2 className="text-2xl pl-2">Music</h2>
         </div>
-        <SearchSong />
+        <SearchSongs />
       </div>
 
       <div className="pl-12 space-y-10 mt-5">

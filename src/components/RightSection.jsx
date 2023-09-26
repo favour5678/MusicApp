@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { BsPlayCircleFill } from "react-icons/bs";
 import { ImPlus } from "react-icons/im";
 import { useSongContext } from "../context/SongContext";
-import SongController from "./SongController";
+import SongsController from "./SongsController";
 
 const RightSection = () => {
   const { musicData, setMusicData, searchSong } = useSongContext();
@@ -30,7 +30,7 @@ const RightSection = () => {
         <h4 className="w-[12%] text-center ml-[19%]">#Song</h4>
         <h4 className="w-[7%] text-center ml-[13%]">#Artist</h4>
       </div>
-      <SongController />
+      <SongsController />
       {combinedData.map((song) => (
         <div
           key={song.id}

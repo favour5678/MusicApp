@@ -1,7 +1,7 @@
 import React from "react";
 import { useSongContext } from "../context/SongContext";
 
-const SearchSong = () => {
+const SearchSongs = () => {
   const { musicData, setSearchSong } = useSongContext();
 
   const handleSearchChange = (e) => {
@@ -29,4 +29,4 @@ const SearchSong = () => {
   );
 };
 
-export default SearchSong;
+export default SearchSongs;
