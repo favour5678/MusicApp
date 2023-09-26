@@ -1,31 +1,28 @@
 import React from "react";
-import { BiSearchAlt } from "react-icons/bi";
 import { useSongContext } from "../context/SongContext";
 
 const SearchSong = () => {
-    const { musicData, setSearchSong } = useSongContext()
+  const { musicData, setSearchSong } = useSongContext();
 
-    const handleSearchChange = (e) => {
-        // if(!e.target.value) return setSearchSong(musicData)
+  const handleSearchChange = (e) => {
+    const searchValue = e.target.value.toLowerCase();
 
-        // const songResults = musicData.filter(song => song.songTitle.includes(e.target.value))
-        // // const songResults = musicData.filter(song => {
-        // //     song.songTitle.includes(e.target.value) 
-        // // })
-
-        // setSearchSong(songResults)
-        setSearchSong(e.target.value)
-        
+    if (!searchValue) {
+      setSearchSong([]);
+    } else {
+      const songResults = musicData.filter((song) =>
+        song.songTitle.toLowerCase().includes(searchValue)
+      );
+      console.log(songResults);
+      setSearchSong(songResults);
     }
+  };
 
   return (
     <div className="flex items-center border border-gray-50 rounded-full w-[70%] h-9 px-2 mt-10">
-      <button>
-        <BiSearchAlt className="text-xl" />
-      </button>
       <input
         type="text"
-        placeholder="Search songs"
+        placeholder="Search song"
         className="bg-transparent outline-none ml-2 overflow-x-auto"
         onChange={handleSearchChange}
       />
