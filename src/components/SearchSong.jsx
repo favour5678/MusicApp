@@ -8,7 +8,7 @@ const SearchSong = () => {
     const searchValue = e.target.value.toLowerCase();
 
     if (!searchValue) {
-      setSearchSong([]);
+      setSearchSong(musicData);
     } else {
       const songResults = musicData.filter((song) =>
         song.songTitle.toLowerCase().includes(searchValue)
