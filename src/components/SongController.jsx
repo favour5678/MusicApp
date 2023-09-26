@@ -5,10 +5,10 @@ const SongController = () => {
   const { musicData } = useSongContext()
 
   return (
-    <div className='w-full bg-blue-400 h-20'>
-    {musicData.map((song) => (
+    <div className='w-full bg-[#B23238] h-[75px] border'>
+    {musicData.map(song => (
      <div key={song.id}>
-       {/* <audio controls src={song.songUrl}>{song.songUrl}</audio> */}
+        
      </div>
     ))}
     </div>
