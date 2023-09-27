@@ -6,7 +6,7 @@ import { useSongContext } from "../context/SongContext";
 import SongsController from "./SongsController";
 
 const RightSection = () => {
-  const { musicData, setMusicData, searchSong } = useSongContext();
+  const { musicData, setMusicData, searchSong, setSelectedSong } = useSongContext();
 
   useEffect(() => {
     const apiUrl = "https://robo-music-api.onrender.com/music/my-api";
@@ -21,6 +21,11 @@ const RightSection = () => {
         setMusicData("Error fetching music data", error);
       });
   }, []);
+
+  const handleClickPlay = (song) => {
+    console.log(song);
+    setSelectedSong(song)
+  }
 
   const combinedData = searchSong.length ? searchSong : musicData;
 
@@ -46,7 +51,7 @@ const RightSection = () => {
           <p className="text-[17px] w-[15%] text-center">{song.songTitle}</p>
           <p className="text-sm w-[16%] text-center">{song.artistName}</p>
           <p className="text-sm w-[13%] text-center">{song.releaseDate}</p>
-          <button className="w-[5%] flex justify-center">
+          <button className="w-[5%] flex justify-center" onClick={handleClickPlay}>
             <BsPlayCircleFill className="text-xl text-[#3B1D26] text-center" />
           </button>
           <button className="w-[5%] flex justify-center">
