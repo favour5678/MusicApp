@@ -23,7 +23,7 @@ const RightSection = () => {
   }, []);
 
   const handleClickPlay = (song) => {
-    console.log(song);
+    console.log('Audio', song.songUrl);
     setSelectedSong(song)
   }
 
@@ -36,7 +36,7 @@ const RightSection = () => {
         <h4 className="w-[7%] text-center ml-[13%]">#Artist</h4>
       </div>
       <SongsController />
-      {combinedData.map((song) => (
+      {combinedData.map(song => (
         <div
           key={song.id}
           className="flex mx-auto justify-between items-center bg-[#B23238] mb-5 w-[95%]"
@@ -51,7 +51,7 @@ const RightSection = () => {
           <p className="text-[17px] w-[15%] text-center">{song.songTitle}</p>
           <p className="text-sm w-[16%] text-center">{song.artistName}</p>
           <p className="text-sm w-[13%] text-center">{song.releaseDate}</p>
-          <button className="w-[5%] flex justify-center" onClick={handleClickPlay}>
+          <button className="w-[5%] flex justify-center" onClick={() => handleClickPlay(song)}>
             <BsPlayCircleFill className="text-xl text-[#3B1D26] text-center" />
           </button>
           <button className="w-[5%] flex justify-center">
