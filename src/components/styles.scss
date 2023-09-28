@@ -1,6 +1,8 @@
 $rhap_background-color: green !default;
-// $custom-width
+$custom-width: 500px;
+
 
 .my-element {
   background-color: $rhap_background-color;
+  width: $custom-width;
 }

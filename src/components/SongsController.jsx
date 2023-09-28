@@ -25,7 +25,7 @@ const SongsController = () => {
           <IoIosSkipBackward />
           <IoIosSkipForward /> */}
           {/* <ReactAudioPlayer src={selectedSong.songUrl} controls className="bg-transparent"/> */}
-        <ReactH5AudioPlayer src={selectedSong.songUrl} layout="horizontal" className='my-element w-[72vw]'/>
+        <ReactH5AudioPlayer src={selectedSong.songUrl} layout="horizontal"  className='my-element'/>
         </div>
       )}
     </div>
