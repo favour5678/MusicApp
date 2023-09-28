@@ -3,6 +3,8 @@ import { useSongContext } from "../context/SongContext";
 import { IoIosSkipBackward } from 'react-icons/io'
 import { IoIosSkipForward } from 'react-icons/io'
 import ReactAudioPlayer from "react-audio-player";
+import ReactH5AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css'
 
 const SongsController = () => {
   const { musicData, selectedSong, setSelectedSong } = useSongContext();
@@ -21,7 +23,8 @@ const SongsController = () => {
           </audio>
           <IoIosSkipBackward />
           <IoIosSkipForward /> */}
-          <ReactAudioPlayer></ReactAudioPlayer>
+          {/* <ReactAudioPlayer src={selectedSong.songUrl} controls className="bg-transparent"/> */}
+        <ReactH5AudioPlayer src={selectedSong.songUrl} layout="horizontal" className="bg-none"/>
         </div>
       )}
     </div>
