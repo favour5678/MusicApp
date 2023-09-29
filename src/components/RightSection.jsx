@@ -18,7 +18,6 @@ const RightSection = () => {
         return response;
       })
       .catch((error) => {
-        // setMusicData("Error fetching music data", error);
         console.error('Error fetching music data', error)
       });
   }, []);

@@ -24,19 +24,23 @@ const SongsController = () => {
 
 
   return (
-    <div className="w-full bg-[#B23238] h-[65px] border flex">
+    <div className="w-[76.8%] bg-[#B23238] h-[65px] border flex fixed bottom-0">
       {currentSong && (
         <div className="flex items-center">
+          <p className="w-[15%] ml-2">
           <img
             src={currentSong.songImage}
             alt="songImage"
-            className="h-[52px] w-14 object-cover object-center ml-1"
+            className="h-[52px] w-14 object-cover object-center"
           />
-          <div className="ml-1">
+          </p>
+          <div className="w-[20%] pl-2">
             <p>{currentSong.songTitle}</p>
             <p className="text-[13px]">{currentSong.artistName}</p>
           </div>
+          <div className="w-[80%]">
           <ReactH5AudioPlayer
+            className="my-element"
             src={currentSong.songUrl}
             layout="horizontal"
             showJumpControls={false}
@@ -44,8 +48,8 @@ const SongsController = () => {
             onClickNext={handleNextClick}
             onClickPrevious={handlePreviousClick}
             showDownloadProgress={false}
-            className="my-element"
           />
+          </div>
         </div>
       )}
     </div>
