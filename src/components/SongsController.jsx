@@ -1,48 +1,48 @@
 import React, { useState } from "react";
 import { useSongContext } from "../context/SongContext";
-import { IoIosSkipBackward } from "react-icons/io";
-import { IoIosSkipForward } from "react-icons/io";
 import ReactH5AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import "./styles.scss";
 
 const SongsController = () => {
-  const { musicData, selectedSong, setSelectedSong } = useSongContext();
+  const { musicData } = useSongContext();
   const [currentSongIndex, setCurrentSongIndex] = useState(0)
+  
+  const currentSong = musicData[currentSongIndex]
 
   const handleNextClick = () => {
     if(currentSongIndex < musicData.length - 1) {
-      console.log(currentSongIndex);
-      console.log('currentSong:', musicData[currentSongIndex].src)
       setCurrentSongIndex(currentSongIndex + 1)
     }
   }
 
+  const handlePreviousClick = () => {
+    if(currentSongIndex > 0) {
+      setCurrentSongIndex(currentSongIndex - 1)
+    }
+  }
+
+
   return (
     <div className="w-full bg-[#B23238] h-[65px] border flex">
-      {selectedSong && (
+      {currentSong && (
         <div className="flex items-center">
           <img
-            src={selectedSong.songImage}
+            src={currentSong.songImage}
             alt="songImage"
             className="h-[52px] w-14 object-cover object-center ml-1"
           />
           <div className="ml-1">
-            <p>{selectedSong.songTitle}</p>
-            <p className="text-[13px]">{selectedSong.artistName}</p>
+            <p>{currentSong.songTitle}</p>
+            <p className="text-[13px]">{currentSong.artistName}</p>
           </div>
-          {/* <audio controls key={selectedSong.songUrl}>
-            <source src={selectedSong.songUrl} type="audio/mp3"/>
-          </audio>
-          <IoIosSkipBackward />
-          <IoIosSkipForward /> */}
-          {/* <ReactAudioPlayer src={selectedSong.songUrl} controls className="bg-transparent"/> */}
           <ReactH5AudioPlayer
-            src={selectedSong.songUrl}
+            src={currentSong.songUrl}
             layout="horizontal"
             showJumpControls={false}
             showSkipControls={true}
             onClickNext={handleNextClick}
+            onClickPrevious={handlePreviousClick}
             showDownloadProgress={false}
             className="my-element"
           />
