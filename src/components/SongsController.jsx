@@ -24,7 +24,7 @@ const SongsController = () => {
 
 
   return (
-    <div className="w-[76.8%] bg-[#B23238] h-[65px] border flex fixed bottom-0">
+    <div className="w-[76.72%] bg-[#B23238] h-[65px] border flex fixed bottom-0">
       {currentSong && (
         <div className="flex items-center">
           <p className="w-[15%] ml-2">
