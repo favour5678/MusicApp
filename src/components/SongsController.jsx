@@ -5,8 +5,7 @@ import "react-h5-audio-player/lib/styles.css";
 import "./styles.scss";
 
 const SongsController = () => {
-  const { musicData, selectedSong, currentSongIndex, setCurrentSongIndex } = useSongContext();
-  // const [currentSongIndex, setCurrentSongIndex] = useState(0);
+  const { musicData, currentSongIndex, setCurrentSongIndex } = useSongContext();
 
   const currentSong = musicData[currentSongIndex];
 
@@ -23,24 +22,24 @@ const SongsController = () => {
   };
 
   return (
-    <div className="w-[76.72%] bg-[#B23238] h-[65px] border flex fixed bottom-0">
-      {/* <div className="w-full bg-[#B23238] h-[65px] border flex fixed bottom-0"> */}
+    // <div className="w-[76.72%] bg-[#B23238] h-[65px] border flex fixed bottom-0">
+    <div className="w-full bg-[#B23238] h-[65px] border flex fixed bottom-0"> 
       {currentSong && (
         <div className="flex items-center">
-          <p className="w-[15%] ml-2">
+          <p className="ml-2 w-16">
             <img
               src={currentSong.songImage}
               alt="songImage"
               className="h-[52px] w-14 object-cover object-center"
             />
           </p>
-          <div className="w-[20%] pl-2">
+          <div className="pl-2 w-36">
             <p>{currentSong.songTitle}</p>
             <p className="text-[13px]">{currentSong.artistName}</p>
           </div>
-          <div className="w-[80%]">
+          <div className="w-32">
             <ReactH5AudioPlayer
-              className="my-element"
+              className="changed_styles"
               src={currentSong.songUrl}
               layout="horizontal"
               showJumpControls={false}

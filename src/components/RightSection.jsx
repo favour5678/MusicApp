@@ -6,7 +6,7 @@ import { useSongContext } from "../context/SongContext";
 import SongsController from "./SongsController";
 
 const RightSection = () => {
-  const { musicData, setMusicData, searchSong, setSelectedSong, currentSongIndex, setCurrentSongIndex } = useSongContext();
+  const { musicData, setMusicData, searchSong, setSelectedSong, setCurrentSongIndex } = useSongContext();
 
   useEffect(() => {
     const apiUrl = "https://robo-music-api.onrender.com/music/my-api";
@@ -55,9 +55,6 @@ const RightSection = () => {
           <button className="w-[5%] flex justify-center" onClick={() => handleClickPlay(song)}>
             <BsPlayCircleFill className="text-xl text-[#3B1D26] text-center" />
           </button>
-          {/* <button className="w-[5%] flex justify-center" onClick={handleClickPlay}>
-            <BsPlayCircleFill className="text-xl text-[#3B1D26] text-center" />
-          </button> */}
           <button className="w-[5%] flex justify-center">
             <ImPlus className="text-center" />
           </button>
