@@ -1,11 +1,9 @@
 $rhap_background-color: transparent !default;
 $custom-width: 652px;  
-$rhap_time-color: purple !default;
 $custom-shadow: none !default;
 
 .changed_styles {
   background-color: $rhap_background-color;
   width: $custom-width;
-  color: $rhap_time-color;
   box-shadow: $custom-shadow;
 }
