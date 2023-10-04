@@ -38,7 +38,7 @@ const SongsController = () => {
           </div>
           <div className="w-32">
             <ReactH5AudioPlayer
-              className="changed_styles border"
+              className="changed_styles"
               src={currentSong.songUrl}
               layout="horizontal"
               showJumpControls={false}

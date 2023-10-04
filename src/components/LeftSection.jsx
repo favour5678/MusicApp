@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { PiMusicNoteDuotone } from "react-icons/pi";
 import { AiFillHome } from "react-icons/ai";
 import { MdOutlinePlaylistAddCheckCircle } from "react-icons/md";
@@ -9,6 +8,7 @@ import { BsGear } from "react-icons/bs";
 import { BiLogOut } from "react-icons/bi";
 import { AiOutlineVideoCamera } from "react-icons/ai";
 import SearchSongs from "./SearchSongs";
+import { Link } from "react-router-dom";
 
 
 const LeftSection = () => {
@@ -26,14 +26,14 @@ const LeftSection = () => {
         {/* Menu */}
         <div className="space-y-3">
           <h2 className="text-xl">Menu</h2>
-          <span className="flex items-center cursor-pointer hover:bg-[#B23238] duration-200 ease-in-out">
+          <Link to={'/'} className="flex items-center cursor-pointer hover:bg-[#B23238] duration-200 ease-in-out">
             <AiFillHome className="text-lg" />
             <p className="text-base pl-2">Home</p>
-          </span>
-          <span className="flex items-center cursor-pointer hover:bg-[#B23238] duration-200 ease-in-out">
+          </Link>
+          <Link to={'playlist'} className="flex items-center cursor-pointer hover:bg-[#B23238] duration-200 ease-in-out">
             <MdOutlinePlaylistAddCheckCircle className="text-lg" />
             <p className="text-base pl-2">Playlists</p>
-          </span>
+          </Link>
           <span className="flex items-center cursor-pointer hover:bg-[#B23238] duration-200 ease-in-out">
             <FaHeadphonesAlt className="text-lg" />
             <p className="text-base pl-2">Artists</p>
