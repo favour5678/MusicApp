@@ -36,7 +36,7 @@ const RightSection = () => {
         <h4 className="w-[12%] text-center ml-[19%]">#Song</h4>
         <h4 className="w-[7%] text-center ml-[13%]">#Artist</h4>
       </div>
-      <SongsController />
+      {/* <SongsController /> */}
       {combinedData.map(song => (
         <div
           key={song.id}
@@ -60,6 +60,9 @@ const RightSection = () => {
           </button>
         </div>
       ))}
+      <div className="mt-20">
+      <SongsController />
+      </div>
     </section>
   );
 };

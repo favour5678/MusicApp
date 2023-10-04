@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSongContext } from "../context/SongContext";
-import ReactH5AudioPlayer from "react-h5-audio-player";
+import ReactH5AudioPlayer, { RHAP_UI } from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import "./styles.scss";
 
@@ -22,7 +22,6 @@ const SongsController = () => {
   };
 
   return (
-    // <div className="w-[76.72%] bg-[#B23238] h-[65px] border flex fixed bottom-0">
     <div className="w-full bg-[#B23238] h-[65px] border flex fixed bottom-0"> 
       {currentSong && (
         <div className="flex items-center">
@@ -39,7 +38,7 @@ const SongsController = () => {
           </div>
           <div className="w-32">
             <ReactH5AudioPlayer
-              className="changed_styles"
+              className="changed_styles border"
               src={currentSong.songUrl}
               layout="horizontal"
               showJumpControls={false}
