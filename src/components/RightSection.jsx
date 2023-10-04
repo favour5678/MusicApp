@@ -6,7 +6,13 @@ import { useSongContext } from "../context/SongContext";
 import SongsController from "./SongsController";
 
 const RightSection = () => {
-  const { musicData, setMusicData, searchSong, setSelectedSong, setCurrentSongIndex } = useSongContext();
+  const {
+    musicData,
+    setMusicData,
+    searchSong,
+    setSelectedSong,
+    setCurrentSongIndex,
+  } = useSongContext();
 
   useEffect(() => {
     const apiUrl = "https://robo-music-api.onrender.com/music/my-api";
@@ -18,15 +24,15 @@ const RightSection = () => {
         return response;
       })
       .catch((error) => {
-        console.error('Error fetching music data', error)
+        console.error("Error fetching music data", error);
       });
   }, []);
 
   const handleClickPlay = (song) => {
-    console.log('Audio', song.songUrl);
-    setCurrentSongIndex(musicData.indexOf(song))
-    setSelectedSong(song)
-  }
+    console.log("Audio", song.songUrl);
+    setCurrentSongIndex(musicData.indexOf(song));
+    setSelectedSong(song);
+  };
 
   const combinedData = searchSong.length ? searchSong : musicData;
 
@@ -36,8 +42,7 @@ const RightSection = () => {
         <h4 className="w-[12%] text-center ml-[19%]">#Song</h4>
         <h4 className="w-[7%] text-center ml-[13%]">#Artist</h4>
       </div>
-      {/* <SongsController /> */}
-      {combinedData.map(song => (
+      {combinedData.map((song) => (
         <div
           key={song.id}
           className="flex mx-auto justify-between items-center bg-[#B23238] mb-5 w-[95%]"
@@ -52,7 +57,10 @@ const RightSection = () => {
           <p className="text-[17px] w-[15%] text-center">{song.songTitle}</p>
           <p className="text-sm w-[16%] text-center">{song.artistName}</p>
           <p className="text-sm w-[13%] text-center">{song.releaseDate}</p>
-          <button className="w-[5%] flex justify-center" onClick={() => handleClickPlay(song)}>
+          <button
+            className="w-[5%] flex justify-center"
+            onClick={() => handleClickPlay(song)}
+          >
             <BsPlayCircleFill className="text-xl text-[#3B1D26] text-center" />
           </button>
           <button className="w-[5%] flex justify-center">
@@ -61,7 +69,7 @@ const RightSection = () => {
         </div>
       ))}
       <div className="mt-20">
-      <SongsController />
+        <SongsController />
       </div>
     </section>
   );
