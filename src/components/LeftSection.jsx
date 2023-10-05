@@ -70,7 +70,6 @@ const LeftSection = () => {
           </span>
         </div>
       </div>
-      {/* <audio controls src="https://res.cloudinary.com/dakiyibak/video/upload/v1693552621/Faouzia_ft_John_Legend_-_Minefield_eelqo7.mp3"></audio> */}
     </section>
   );
 };

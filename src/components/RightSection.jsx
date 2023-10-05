@@ -12,6 +12,7 @@ const RightSection = () => {
     searchSong,
     setSelectedSong,
     setCurrentSongIndex,
+    addToPlaylist
   } = useSongContext();
 
   useEffect(() => {
@@ -63,7 +64,7 @@ const RightSection = () => {
           >
             <BsPlayCircleFill className="text-xl text-[#3B1D26] text-center" />
           </button>
-          <button className="w-[5%] flex justify-center">
+          <button className="w-[5%] flex justify-center" onClick={() => console.log(song.songTitle)}>
             <ImPlus className="text-center" />
           </button>
         </div>
