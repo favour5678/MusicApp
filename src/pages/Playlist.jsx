@@ -13,7 +13,7 @@ const Playlist = () => {
     if(selectedSong === songId) {
       setSelectedSong(null)
     }
-    console.log(song);
+    console.log(songId);
   };
 
   return (
@@ -46,7 +46,7 @@ const Playlist = () => {
               </button>
               <button
                 className="w-[5%] flex justify-center"
-                onClick={() => handleRemoveFromPlaylist(song.id)}
+                onClick={() => handleRemoveFromPlaylist(song)}
               >
                 <AiOutlineMinus className="text-center" />
               </button>
