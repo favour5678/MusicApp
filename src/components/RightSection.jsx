@@ -12,7 +12,6 @@ const RightSection = () => {
     searchSong,
     setSelectedSong,
     setCurrentSongIndex,
-    playlist,
     setPlaylist
   } = useSongContext();
 

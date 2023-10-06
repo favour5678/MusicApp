@@ -8,12 +8,12 @@ const Playlist = () => {
   const { playlist, setPlaylist, selectedSong, setSelectedSong } = useSongContext();
 
   const handleRemoveFromPlaylist = (songId) => {
+    console.log(playlist)
     const updatedSong = playlist.filter(song => song !== songId)
     setPlaylist(updatedSong)
     if(selectedSong === songId) {
       setSelectedSong(null)
     }
-    console.log(songId);
   };
 
   return (
