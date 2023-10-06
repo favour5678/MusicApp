@@ -13,13 +13,6 @@ export const SongProvider = ({ children }) => {
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [playlist, setPlaylist] = useState([])
 
-  const addToPlaylist = (songId) => {
-    setPlaylist(prevSong => {
-      const updatedPlaylist = { ...prevSong, [songId]: prevSong[songId] + 1 }
-      return updatedPlaylist;
-    })
-  }
-
   const songContextValue = {
     searchSong,
     setSearchSong,
@@ -29,7 +22,8 @@ export const SongProvider = ({ children }) => {
     setSelectedSong,
     currentSongIndex,
     setCurrentSongIndex,
-    addToPlaylist
+    playlist,
+    setPlaylist,
   };
 
   return (

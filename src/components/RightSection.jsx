@@ -12,7 +12,8 @@ const RightSection = () => {
     searchSong,
     setSelectedSong,
     setCurrentSongIndex,
-    addToPlaylist
+    playlist,
+    setPlaylist
   } = useSongContext();
 
   useEffect(() => {
@@ -30,10 +31,14 @@ const RightSection = () => {
   }, []);
 
   const handleClickPlay = (song) => {
-    console.log("Audio", song.songUrl);
     setCurrentSongIndex(musicData.indexOf(song));
     setSelectedSong(song);
   };
+
+  const handleAddToPlaylist = (song) => {
+    setPlaylist(prevSong => [...prevSong, song])
+    setSelectedSong(song)
+  }
 
   const combinedData = searchSong.length ? searchSong : musicData;
 
@@ -64,7 +69,7 @@ const RightSection = () => {
           >
             <BsPlayCircleFill className="text-xl text-[#3B1D26] text-center" />
           </button>
-          <button className="w-[5%] flex justify-center" onClick={() => console.log(song.songTitle)}>
+          <button className="w-[5%] flex justify-center" onClick={() => handleAddToPlaylist(song)}>
             <ImPlus className="text-center" />
           </button>
         </div>
