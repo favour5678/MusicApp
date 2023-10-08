@@ -3,6 +3,7 @@ import Home from "../pages/Home"
 import Playlist from "../pages/Playlist";
 import Error from "../pages/Error";
 import Songs from "../pages/Songs";
+import Artists from "../pages/Artists";
 
 const Router = createBrowserRouter([
     {
@@ -16,6 +17,10 @@ const Router = createBrowserRouter([
     {
         path: '/playlist',
         element: <Playlist />
+    },
+    {
+        path: '/artists',
+        element: <Artists />
     },
     {
         path: '*',

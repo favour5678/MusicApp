@@ -34,10 +34,10 @@ const LeftSection = () => {
             <MdOutlinePlaylistAddCheckCircle className="text-lg" />
             <p className="text-base pl-2">Playlists</p>
           </Link>
-          <span className="flex items-center cursor-pointer hover:bg-[#B23238] duration-200 ease-in-out">
+          <Link to={'/artists'} className="flex items-center cursor-pointer hover:bg-[#B23238] duration-200 ease-in-out">
             <FaHeadphonesAlt className="text-lg" />
             <p className="text-base pl-2">Artists</p>
-          </span>
+          </Link>
         </div>
 
         {/* Library */}
