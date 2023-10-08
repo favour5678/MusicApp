@@ -3,7 +3,8 @@ import LeftSection from "../components/LeftSection";
 import { useSongContext } from "../context/SongContext";
 import { BsPlayCircleFill } from "react-icons/bs";
 import { AiOutlineMinus } from "react-icons/ai";
-import SongsController from "../components/SongsController";
+
+import PlaylistController from "../components/PlaylistController";
 
 const Playlist = () => {
   const {
@@ -67,7 +68,7 @@ const Playlist = () => {
             </div>
           ))}
           <div className="mt-20">
-            <SongsController />
+            <PlaylistController />
           </div>
         </div>
       </div>
