@@ -30,7 +30,7 @@ const LeftSection = () => {
             <AiFillHome className="text-lg" />
             <p className="text-base pl-2">Home</p>
           </Link>
-          <Link to={'playlist'} className="flex items-center cursor-pointer hover:bg-[#B23238] duration-200 ease-in-out">
+          <Link to={'/playlist'} className="flex items-center cursor-pointer hover:bg-[#B23238] duration-200 ease-in-out">
             <MdOutlinePlaylistAddCheckCircle className="text-lg" />
             <p className="text-base pl-2">Playlists</p>
           </Link>
@@ -43,10 +43,10 @@ const LeftSection = () => {
         {/* Library */}
         <div className="space-y-3">
           <h2 className="text-xl">Library</h2>
-          <span className="flex items-center cursor-pointer hover:bg-[#B23238] duration-200 ease-in-out">
+          <Link to={'/songs'} className="flex items-center cursor-pointer hover:bg-[#B23238] duration-200 ease-in-out">
             <GiLoveSong className="text-lg" />
             <p className="text-base pl-2">Songs</p>
-          </span>
+          </Link>
           <span className="flex items-center cursor-pointer hover:bg-[#B23238] duration-200 ease-in-out">
             <IoAlbumsOutline className="text-lg" />
             <p className="text-base pl-2">Albums</p>

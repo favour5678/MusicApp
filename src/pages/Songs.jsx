@@ -1,8 +1,11 @@
 import React from 'react'
+import Home from './Home'
 
 const Songs = () => {
   return (
-    <div>Songs</div>
+    <div>
+        <Home />
+    </div>
   )
 }
 
