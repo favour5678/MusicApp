@@ -6,13 +6,19 @@ import { AiOutlineMinus } from "react-icons/ai";
 import SongsController from "../components/SongsController";
 
 const Playlist = () => {
-  const { playlist, setPlaylist, selectedSong, setSelectedSong, setCurrentSongIndex } = useSongContext();
+  const {
+    playlist,
+    setPlaylist,
+    selectedSong,
+    setSelectedSong,
+    setCurrentSongIndex,
+  } = useSongContext();
 
   const handleRemoveFromPlaylist = (songId) => {
-    const updatedSong = playlist.filter(song => song !== songId)
-    setPlaylist(updatedSong)
-    if(selectedSong === songId) {
-      setSelectedSong(null)
+    const updatedSong = playlist.filter((song) => song !== songId);
+    setPlaylist(updatedSong);
+    if (selectedSong === songId) {
+      setSelectedSong(null);
     }
   };
 
@@ -25,7 +31,10 @@ const Playlist = () => {
     <section className="bg-gradient-to-br from from-[#3B1D26] to-[#111111] w-full h-screen text-gray-200 font-body">
       <div className="container max-w-full flex">
         <LeftSection />
-        <div className="w-[78%] h-screen overflow-y-auto mt-5">
+        <div className="w-[78%] h-screen overflow-y-auto">
+          <h2 className="flex mx-auto text-[15px] border border-t-0 border-r-0 border-l-0 mb-4 mt-3 w-[95%]">
+            Playlist
+          </h2>
           {playlist.map((song) => (
             <div
               key={song.id}
@@ -58,8 +67,8 @@ const Playlist = () => {
             </div>
           ))}
           <div className="mt-20">
-        <SongsController />
-      </div>
+            <SongsController />
+          </div>
         </div>
       </div>
     </section>
