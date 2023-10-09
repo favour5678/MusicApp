@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSongContext } from "../context/SongContext";
-import ReactH5AudioPlayer, { RHAP_UI } from "react-h5-audio-player";
+import ReactH5AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import "./styles.scss";
 
@@ -21,8 +21,13 @@ const SongsController = () => {
     }
   };
 
+  const handleAutoPlaySong = () => {
+    const nextSongIndex = (currentSongIndex + 1) % musicData.length;
+    setCurrentSongIndex(nextSongIndex);
+  };
+
   return (
-    <div className="w-full bg-[#B23238] h-[65px] border flex fixed bottom-0"> 
+    <div className="w-full bg-[#B23238] h-[65px] border flex fixed bottom-0">
       {currentSong && (
         <div className="flex items-center">
           <p className="ml-2 w-16">
@@ -46,6 +51,7 @@ const SongsController = () => {
               onClickNext={handleNextClick}
               onClickPrevious={handlePreviousClick}
               showDownloadProgress={false}
+              onEnded={handleAutoPlaySong}
             />
           </div>
         </div>

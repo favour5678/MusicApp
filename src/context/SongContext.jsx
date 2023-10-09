@@ -23,7 +23,7 @@ export const SongProvider = ({ children }) => {
     currentSongIndex,
     setCurrentSongIndex,
     playlist,
-    setPlaylist,
+    setPlaylist
   };
 
   return (
