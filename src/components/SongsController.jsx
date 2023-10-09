@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSongContext } from "../context/SongContext";
 import ReactH5AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
