@@ -26,8 +26,7 @@ const RightSection = () => {
       .get(apiUrl)
       .then((response) => {
         setMusicData(response.data);
-        setLoading(false);
-        return response;
+        setLoading(false)
       })
       .catch((error) => {
         console.error("Error fetching music data", error);
