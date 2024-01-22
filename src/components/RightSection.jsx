@@ -17,7 +17,7 @@ const RightSection = () => {
     setPlaylist,
   } = useSongContext();
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const apiUrl = "https://robo-music-api.onrender.com/music/my-api";
